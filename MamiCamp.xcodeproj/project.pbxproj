@@ -13,6 +13,9 @@
 		FEC4ADB2222E89CA003CCE13 /* MamiCamp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FEC4ADB0222E89CA003CCE13 /* MamiCamp.xcdatamodeld */; };
 		FEC4ADB4222E89CC003CCE13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEC4ADB3222E89CC003CCE13 /* Assets.xcassets */; };
 		FEC4ADB7222E89CC003CCE13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEC4ADB5222E89CC003CCE13 /* LaunchScreen.storyboard */; };
+		FEEE9B5E223279B8005EE1B9 /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE9B5D223279B8005EE1B9 /* CityViewController.swift */; };
+		FEEE9B6022327F11005EE1B9 /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE9B5F22327F11005EE1B9 /* CityTableViewCell.swift */; };
+		FEEE9B622232830D005EE1B9 /* CityViewController+TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEE9B612232830D005EE1B9 /* CityViewController+TableViewDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		FEC4ADB3222E89CC003CCE13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FEC4ADB6222E89CC003CCE13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FEC4ADB8222E89CC003CCE13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEEE9B5D223279B8005EE1B9 /* CityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
+		FEEE9B5F22327F11005EE1B9 /* CityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
+		FEEE9B612232830D005EE1B9 /* CityViewController+TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CityViewController+TableViewDataSource.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +65,13 @@
 				FEC4ADA9222E89CA003CCE13 /* AppDelegate.swift */,
 				FEC4ADAB222E89CA003CCE13 /* ViewController.swift */,
 				FEC4ADAD222E89CA003CCE13 /* Main.storyboard */,
+				FEEE9B5F22327F11005EE1B9 /* CityTableViewCell.swift */,
+				FEEE9B612232830D005EE1B9 /* CityViewController+TableViewDataSource.swift */,
 				FEC4ADB3222E89CC003CCE13 /* Assets.xcassets */,
 				FEC4ADB5222E89CC003CCE13 /* LaunchScreen.storyboard */,
 				FEC4ADB8222E89CC003CCE13 /* Info.plist */,
 				FEC4ADB0222E89CA003CCE13 /* MamiCamp.xcdatamodeld */,
+				FEEE9B5D223279B8005EE1B9 /* CityViewController.swift */,
 			);
 			path = MamiCamp;
 			sourceTree = "<group>";
@@ -138,9 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEEE9B622232830D005EE1B9 /* CityViewController+TableViewDataSource.swift in Sources */,
 				FEC4ADAC222E89CA003CCE13 /* ViewController.swift in Sources */,
 				FEC4ADAA222E89CA003CCE13 /* AppDelegate.swift in Sources */,
+				FEEE9B6022327F11005EE1B9 /* CityTableViewCell.swift in Sources */,
 				FEC4ADB2222E89CA003CCE13 /* MamiCamp.xcdatamodeld in Sources */,
+				FEEE9B5E223279B8005EE1B9 /* CityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
