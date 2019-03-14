@@ -15,16 +15,10 @@ extension CityViewController: UITableViewDelegate {
         cell.cityLabel.textColor = UIColor.red
         print("Ini \(self.viewModel.cities[indexPath.row])")
         
-        if cell.cityLabel.textColor == UIColor.black {
-            cell.cityLabel.textColor = UIColor.red
-        } else {
-            cell.cityLabel.textColor = UIColor.black
-        }
-        
         if let controller = self.storyboard?.instantiateViewController(withIdentifier: "CampusViewController") as? CampusViewController {
             
             controller.titlePage = self.viewModel.cities[indexPath.row].city
-            self.present(controller, animated: true, completion: nil)
+            self.show(controller, sender: self)
         } else {
             print("Something wrong opening next page")
         }
