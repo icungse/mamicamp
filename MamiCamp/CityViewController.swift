@@ -17,6 +17,7 @@ class CityViewController: UIViewController {
         super.viewDidLoad()
         
         cityTableView.dataSource = self
+        cityTableView.delegate = self
         
     }
 }

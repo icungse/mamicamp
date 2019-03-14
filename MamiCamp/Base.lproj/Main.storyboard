@@ -120,5 +120,62 @@
             </objects>
             <point key="canvasLocation" x="856.52173913043487" y="130.43478260869566"/>
         </scene>
+        <!--Campus View Controller-->
+        <scene sceneID="PPQ-ex-8Pd">
+            <objects>
+                <viewController storyboardIdentifier="CampusViewController" id="jIh-w7-cni" customClass="CampusViewController" customModule="MamiCamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ATn-sM-0qr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZP7-Sg-nJz">
+                                <rect key="frame" x="0.0" y="70" width="414" height="666"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wqH-4a-rjP">
+                                    <size key="itemSize" width="98" height="47"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="9aP-US-p9c">
+                                        <rect key="frame" x="0.0" y="0.0" width="98" height="47"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="98" height="47"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                        <size key="customSize" width="98" height="47"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTM-Bs-Pc6">
+                                <rect key="frame" x="10" y="30" width="394" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vTM-Bs-Pc6" firstAttribute="top" secondItem="zlK-NZ-TqS" secondAttribute="top" constant="10" id="BhM-FN-55s"/>
+                            <constraint firstItem="vTM-Bs-Pc6" firstAttribute="leading" secondItem="zlK-NZ-TqS" secondAttribute="leading" constant="10" id="DPg-ZD-YyO"/>
+                            <constraint firstItem="zlK-NZ-TqS" firstAttribute="trailing" secondItem="ZP7-Sg-nJz" secondAttribute="trailing" id="KiH-uM-vP3"/>
+                            <constraint firstItem="ZP7-Sg-nJz" firstAttribute="top" secondItem="zlK-NZ-TqS" secondAttribute="top" constant="50" id="LOh-GC-Bga"/>
+                            <constraint firstItem="zlK-NZ-TqS" firstAttribute="bottom" secondItem="ZP7-Sg-nJz" secondAttribute="bottom" id="XIf-Hp-aZX"/>
+                            <constraint firstItem="ZP7-Sg-nJz" firstAttribute="leading" secondItem="zlK-NZ-TqS" secondAttribute="leading" id="Z7W-D8-bqx"/>
+                            <constraint firstItem="zlK-NZ-TqS" firstAttribute="trailing" secondItem="vTM-Bs-Pc6" secondAttribute="trailing" constant="10" id="fh6-em-BEp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zlK-NZ-TqS"/>
+                    </view>
+                    <connections>
+                        <outlet property="campusCollectionView" destination="ZP7-Sg-nJz" id="YmW-A8-8Yp"/>
+                        <outlet property="titleLabel" destination="vTM-Bs-Pc6" id="37f-tp-gbV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v3N-Ie-rpm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1573.913043478261" y="124.72826086956523"/>
+        </scene>
     </scenes>
 </document>
