@@ -12,6 +12,8 @@ class CityViewController: UIViewController {
     @IBOutlet weak var cityTableView: UITableView!
     
     let cities = ["Yogyakarta", "Bandung", "Jakarta", "Solo", "Semarang"]
+    
+    lazy var viewModel = CityViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,5 +21,6 @@ class CityViewController: UIViewController {
         cityTableView.dataSource = self
         cityTableView.delegate = self
         
+        viewModel.loadCities()
     }
 }
