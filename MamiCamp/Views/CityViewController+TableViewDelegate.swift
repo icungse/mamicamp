@@ -13,7 +13,7 @@ extension CityViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! CityTableViewCell
         cell.cityLabel.textColor = UIColor.red
-        print("Ini \(cities[indexPath.row])")
+        print("Ini \(self.viewModel.cities[indexPath.row])")
         
         if cell.cityLabel.textColor == UIColor.black {
             cell.cityLabel.textColor = UIColor.red
@@ -23,7 +23,7 @@ extension CityViewController: UITableViewDelegate {
         
         if let controller = self.storyboard?.instantiateViewController(withIdentifier: "CampusViewController") as? CampusViewController {
             
-            controller.titlePage = cities[indexPath.row]
+            controller.titlePage = self.viewModel.cities[indexPath.row].city
             self.present(controller, animated: true, completion: nil)
         } else {
             print("Something wrong opening next page")
@@ -34,6 +34,6 @@ extension CityViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! CityTableViewCell
         cell.cityLabel.textColor = UIColor.black
-        print("Ini deselect \(cities[indexPath.row])")
+        print("Ini deselect \(self.viewModel.cities[indexPath.row])")
     }
 }

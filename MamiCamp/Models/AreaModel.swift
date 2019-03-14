@@ -18,16 +18,16 @@ class AreaModel {
     }
     
     required init(object: JSON) {
-       
-            self.name = object["name"].stringValue
+        
+        self.name = object["name"].stringValue
+        
+        for coordinateJson in object["coordinate"].arrayValue {
+            let coordinate = CoordinateModel()
+            coordinate.latitude = coordinateJson[0].doubleValue
+            coordinate.longtitude = coordinateJson[1].doubleValue
             
-            for coordinateJson in object["coordinate"].arrayValue {
-                let coordinate = CoordinateModel()
-                coordinate.latitude = coordinateJson[0].doubleValue
-                coordinate.longtitude = coordinateJson[1].doubleValue
-                
-                self.coordinate.append(coordinate)
-            }
-    
+            self.coordinate.append(coordinate)
+        }
+        
     }
 }

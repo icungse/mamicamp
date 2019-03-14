@@ -10,14 +10,13 @@ import UIKit
 
 extension CityViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.cities.count
+        return self.viewModel.cities.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CityTableView", for: indexPath) as! CityTableViewCell
         
-        cell.cityLabel.text = self.cities[indexPath.row]
-        
+        cell.cityLabel.text = self.viewModel.cities[indexPath.row].city
         return cell
     }
     

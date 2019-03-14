@@ -9,21 +9,29 @@
 import Foundation
 import SwiftyJSON
 
+protocol CityViewModelDelegate {
+    func onCitiesLoaded()
+}
+
+
+
 class CityViewModel {
     
+    var delegate: CityViewModelDelegate?
     var cities = [CityModel]()
     
     func loadCities(){
-        NetworkFacade.callGetApi(url: "https://mamikos.com/garuda/area", parameters: [:]) { (json) in for object in json["campus"].arrayValue {
-            let city = CityModel()
+        NetworkFacade.callGetApi(url: "https://mamikos.com/garuda/area", parameters: [:]) { (json) in
+            for object in json["campus"].arrayValue {
+                let city = CityModel(object: object)
+                
+                self.cities.append(city)
+                
+                print("cities :  \(self.cities)")
+                print("cities :  \(city.area)")
+            }
             
-            self.cities.append(city)
-            
-            print("cities :  \(self.cities)")
-            print("cities :  \(city.area)")
+            self.delegate?.onCitiesLoaded()
         }
-        
-        
     }
-}
 }
