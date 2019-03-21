@@ -34,5 +34,14 @@ class ViewController: UIViewController {
         }
         
     }
+    
+    @IBAction func openRegister(_ sender: UIButton) {
+        if let controller = self.storyboard?.instantiateViewController(withIdentifier: "RegisterViewController") as? RegisterViewController {
+            self.show(controller, sender: self)
+        } else {
+            print("Something wrong opening next page")
+        }
+    }
+    
 }
 

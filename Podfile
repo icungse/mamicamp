@@ -7,5 +7,6 @@ target 'MamiCamp' do
 
   # Pods for MamiCamp
   pod 'Alamofire-SwiftyJSON'
+  pod 'AlamofireImage', '~> 3.5'
 
 end

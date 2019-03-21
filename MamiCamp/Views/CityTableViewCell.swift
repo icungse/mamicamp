@@ -10,6 +10,7 @@ import UIKit
 
 class CityTableViewCell: UITableViewCell {
     @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var cityImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
